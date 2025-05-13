@@ -1,107 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Welcome to Chuha's Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chuha's Fruit Farm</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f2f2f2;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fafafa;
       color: #333;
     }
-
     header {
-      background-color: #2e8b57;
-      color: white;
-      padding: 40px 20px;
+      background-color: #4CAF50;
+      padding: 1rem;
       text-align: center;
-    }
-
-    nav {
-      background-color: #1e4f3f;
-      text-align: center;
-      padding: 10px;
-    }
-
-    nav a {
       color: white;
-      text-decoration: none;
-      margin: 0 15px;
+      font-size: 2rem;
       font-weight: bold;
     }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      padding: 30px;
-    }
-
-    section {
-      margin-bottom: 40px;
-    }
-
-    footer {
-      background-color: #2e8b57;
-      color: white;
+    .hero {
+      padding: 2rem;
       text-align: center;
-      padding: 20px;
+      background: #e8f5e9;
     }
-
-    button {
-      padding: 10px 20px;
-      background-color: #1e4f3f;
+    .hero h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 250px;
+      padding: 1rem;
+      text-align: center;
+      transition: 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      max-width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .card h3 {
+      margin-top: 0.5rem;
+      color: #4CAF50;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #4CAF50;
       color: white;
-      border: none;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-
-    button:hover {
-      background-color: #145236;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Welcome to Chuha's Website</h1>
-    <p>Dreaming mountains, hacking skills, and pure love.</p>
-  </header>
+  <header>Chuha's Fruit Farm</header>
 
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <section class="hero">
+    <h2>Fresh, Organic Fruits Grown in the Heart of Himachal</h2>
+    <p>We cultivate apples, pears, peaches, and apricots with love, straight from nature to you.</p>
+  </section>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hi! I'm Chuha, a calisthenics guy, ethical hacker-in-training, and a fruit farming dreamer from Himachal. I'm building my life with love, loyalty, and purpose.</p>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li>📈 Learning Ethical Hacking</li>
-        <li>🏋️‍♂️ Calisthenics Strength Journey</li>
-        <li>🌳 Future Fruit Farm Business Plan</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>You can reach me at: <strong>chuha@example.com</strong></p>
-      <button onclick="alert('Thanks for visiting my site! ❤️')">Say Hi!</button>
-    </section>
-  </main>
+  <section class="products">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" alt="Apple">
+      <h3>Apple</h3>
+      <p>Grown in the chilly altitudes of Himachal. Crisp, juicy, and pesticide-free.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2" alt="Pear">
+      <h3>Pear</h3>
+      <p>Sweet and buttery pears picked at peak ripeness from our hillside orchards.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1576752443175-1950e6ea3ad6" alt="Peach">
+      <h3>Peach</h3>
+      <p>Soft and aromatic, grown in rich Himachali soil without any artificial chemicals.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1615484477704-1c1d3c2e69fa" alt="Apricot">
+      <h3>Apricot</h3>
+      <p>Sun-kissed golden apricots with a perfect balance of sweetness and tanginess.</p>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Chuha. All rights reserved.</p>
+    © 2025 Chuha's Fruit Farm | Himachal Pradesh, India
   </footer>
 
 </body>
