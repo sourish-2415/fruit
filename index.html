@@ -2,108 +2,155 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chuha's Fruit Farm</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #fafafa;
+      padding: 0;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
       color: #333;
+      line-height: 1.6;
     }
+
     header {
-      background-color: #4CAF50;
-      padding: 1rem;
-      text-align: center;
+      background: url('https://images.unsplash.com/photo-1567306226416-28f0efdc88ce') center/cover no-repeat;
+      height: 60vh;
       color: white;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-    .hero {
-      padding: 2rem;
-      text-align: center;
-      background: #e8f5e9;
-    }
-    .hero h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .products {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       justify-content: center;
-      gap: 2rem;
-      padding: 2rem;
-    }
-    .card {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      width: 250px;
-      padding: 1rem;
+      align-items: center;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
       text-align: center;
-      transition: 0.3s ease;
     }
-    .card:hover {
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.3em;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
       transform: translateY(-5px);
     }
-    .card img {
-      max-width: 100%;
-      height: 150px;
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
       object-fit: cover;
-      border-radius: 6px;
     }
-    .card h3 {
-      margin-top: 0.5rem;
-      color: #4CAF50;
+
+    .product-card h3 {
+      margin: 15px;
     }
-    .card p {
-      font-size: 0.9rem;
-      color: #666;
+
+    .product-card p {
+      margin: 0 15px 20px;
+      font-size: 0.95em;
     }
+
+    .about,
+    .contact {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 30px;
+      margin-bottom: 40px;
+    }
+
     footer {
+      background: #222;
+      color: #eee;
       text-align: center;
-      padding: 1rem;
-      background-color: #4CAF50;
-      color: white;
-      margin-top: 2rem;
+      padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>Chuha's Fruit Farm</header>
+  <header>
+    <h1>Chuha's Fruit Farm</h1>
+    <p>Fresh, local, and full of love – Apples, Pears, Peaches & Apricots</p>
+  </header>
 
-  <section class="hero">
-    <h2>Fresh, Organic Fruits Grown in the Heart of Himachal</h2>
-    <p>We cultivate apples, pears, peaches, and apricots with love, straight from nature to you.</p>
+  <section>
+    <h2 style="text-align:center; margin-bottom:30px;">Our Fruits</h2>
+    <div class="products">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" alt="Apples">
+        <h3>Apple</h3>
+        <p>Sweet and crisp apples grown in the pure air of Himachal.</p>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1567306301408-9b74779a11af" alt="Pears">
+        <h3>Pear</h3>
+        <p>Juicy and refreshing, our pears are naturally ripened on trees.</p>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f" alt="Peaches">
+        <h3>Peach</h3>
+        <p>Soft, fragrant, and perfect for summer bites and jams.</p>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1582284548824-26f176c6ab61" alt="Apricots">
+        <h3>Apricot</h3>
+        <p>Golden apricots rich in flavor, grown with mountain sunlight.</p>
+      </div>
+    </div>
   </section>
 
-  <section class="products">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" alt="Apple">
-      <h3>Apple</h3>
-      <p>Grown in the chilly altitudes of Himachal. Crisp, juicy, and pesticide-free.</p>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2" alt="Pear">
-      <h3>Pear</h3>
-      <p>Sweet and buttery pears picked at peak ripeness from our hillside orchards.</p>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1576752443175-1950e6ea3ad6" alt="Peach">
-      <h3>Peach</h3>
-      <p>Soft and aromatic, grown in rich Himachali soil without any artificial chemicals.</p>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1615484477704-1c1d3c2e69fa" alt="Apricot">
-      <h3>Apricot</h3>
-      <p>Sun-kissed golden apricots with a perfect balance of sweetness and tanginess.</p>
-    </div>
+  <section class="about">
+    <h2>About Our Farm</h2>
+    <p>
+      Nestled in the serene valleys of Himachal Pradesh, our farm has been growing fruits with care and tradition. We use natural methods, fresh Himalayan water, and no harmful chemicals.
+    </p>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: chuha@fruitfarm.com</p>
+    <p>Phone: +91-9876543210</p>
+    <p>Location: Near Solan, Himachal Pradesh, India</p>
   </section>
 
   <footer>
-    © 2025 Chuha's Fruit Farm | Himachal Pradesh, India
+    <p>&copy; 2025 Chuha's Fruit Farm. All rights reserved.</p>
   </footer>
 
 </body>
